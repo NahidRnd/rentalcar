@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 function CarCard({car, name, type, img, gas, gear, capacity, price, city, onAddFav, isAddeddToFav, favorites}) {  
 
-  const ids = favorites.map(car => car.id);
+  const ids = (favorites || []).map(car => car.id);
 
   return (
     <div className="max-w-xs min-h-388 w-304 rounded-[10px] overflow-hidden bg-white p-32">
